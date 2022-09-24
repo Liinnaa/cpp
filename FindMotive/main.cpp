@@ -12,13 +12,17 @@ int main()
 
     cout << "Lien: ";
     cin >> path;
-    cout << "Motive: ";
-    cin >> motive;
+    
+    file.open(path, ios::in);
 
-    if(!open(path).is_open()){
+    if(!file.is_open()){
         cout << "The file " << path << " could not be opened";
         return 1;
     }
+
+    cout << "Motive: ";
+    cin >> motive;
+
     while(file >> word){
         if(word.find(motive) != string::npos)
             occurence++;
