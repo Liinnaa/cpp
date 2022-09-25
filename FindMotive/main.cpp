@@ -4,31 +4,27 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
-    string path, word, motive;
+    string word;
     int occurence = 0;
     fstream file;
-
-    cout << "Lien: ";
-    cin >> path;
     
-    file.open(path, ios::in);
+    file.open(argv[1], ios::in);
 
+    //condition if file doesn't exist
     if(!file.is_open()){
-        cout << "The file " << path << " could not be opened";
+        cout << "The file " << argv[1] << " could not be opened";
         return 1;
     }
 
-    cout << "Motive: ";
-    cin >> motive;
-
+    //calculating occurences
     while(file >> word){
-        if(word.find(motive) != string::npos)
+        if(word.find(argv[2]) != string::npos)
             occurence++;
     }
 
-    cout << "The file " << path << " contains " << occurence << " words containing the motive " << motive;
+    cout << "The file " << argv[1] << " contains " << occurence << " words containing the motive " << argv[2];
 
     return 0;
 }
