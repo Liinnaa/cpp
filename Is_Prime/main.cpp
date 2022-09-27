@@ -10,11 +10,10 @@ int main()
 
     cout << "Enter a positive int: ";
   
-    while (true){
+    while (cin >> n){
         bool is_prime = true;
-        cin >> n;
 
-        if(n == 1)
+        if(n == 0 || n == 1)
             is_prime = false;
 
         //check if prime
