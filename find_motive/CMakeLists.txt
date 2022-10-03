@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(find_motive VERSION 0.1.0)
+project(find_motive)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(main main.cpp)
 
-include(CTest)
-enable_testing()
 
-add_executable(find_motive main.cpp)
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
