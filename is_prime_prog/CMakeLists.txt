@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(is_prime_prog)
+cmake_minimum_required(VERSION 3.0)
+project(is_prim_prog)
 set(CMAKE_CXX_STANDARD 14)
 add_executable(main main.cpp)
 
