@@ -8,13 +8,13 @@ int main(int argc, char *argv[])
 {
     string word;
     int occurence = 0;
-    fstream file;
+    //fstream file;
     
-    file.open(argv[1], ios::in);
-
+    //file.open(argv[1], ios::in);
+    ifstream file(argv[1]);
     //condition if file doesn't exist
-    if(!file.is_open()){
-        cout << "The file " << argv[1] << " could not be opened";
+    if(file.fail()){
+        cout << "The file " << argv[1] << " could not be opened \n";
         return 1;
     }
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
             occurence++;
     }
 
-    cout << "The file " << argv[1] << " contains " << occurence << " words containing the motive " << argv[2];
+    cout << "The file " << argv[1] << " contains " << occurence << " words containing the motive " << argv[2] << "\n";
 
     return 0;
 }
