@@ -49,6 +49,7 @@ private:
 // Nonmember function operators go here
 Vector operator+(const Vector &other, const Vector& rhs);
 Vector operator-(const Vector &other, const Vector& rhs);
+value operator*(const Vector &other, const Vector& rhs);
 Vector operator*(const Vector &other, int value);
 Vector operator*(int value, const Vector& rhs);
 std::ostream& operator<<(std::ostream& os, const Vector& rhs);
