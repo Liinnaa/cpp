@@ -1,4 +1,4 @@
-#include "vector.hh"
+#include "vector.h"
 
 const int& Vector::operator[](size_t x) const{
     if(x == 0)
