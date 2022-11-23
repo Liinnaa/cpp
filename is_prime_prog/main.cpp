@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    int i, n;
+    long long i, n;
     string rawline; 
   
     while (cin >> n){
@@ -15,7 +16,7 @@ int main()
             is_prime = false;
 
         //check if prime
-        for (i = 2; i <= n/2; ++i) {
+        for (i = 2; i <= std::sqrt(n); ++i) {
             if (n % i == 0) {
                 is_prime = false;
                 break;
